@@ -5,7 +5,7 @@ import LoginForm from "../molecules/LoginForm";
 const LoginSection = () => {
   return (
     <section className="min-h-screen flex flex-col text-center justify-center items-center">
-      <h1 className="text-6xl font-[400]">Welcome back</h1>
+      <h1 className="text-4xl md:text-5xl lg:text-6xl font-[400]">Welcome back</h1>
       <p className="text-secondary-color text-lg font-[400] mt-2">
         Step into our shopping metaverse for an unforgettable shopping
         experience

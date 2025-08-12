@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import BackgroundGradient from "./components/molecules/BackgroundGradient";
+import ReduxProvider from "@/rtkQuery/Provider";
+import Navbar from "./components/organisms/Navbar";
+import Footer from "./components/organisms/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,7 +35,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} relative bg-white antialiased`}
       >
         <BackgroundGradient />
-        {children}
+        <ReduxProvider>
+          <Navbar />
+          <main className="min-h-screen">{children}</main>
+          <Footer />
+        </ReduxProvider>
       </body>
     </html>
   );
